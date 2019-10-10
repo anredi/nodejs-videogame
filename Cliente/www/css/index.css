@@ -1,0 +1,40 @@
+
+html,body { 
+  overflow:hidden; 
+}
+
+input[type="text"], input[type="password"] 
+{
+    border: 1px solid black;
+}
+
+
+#roundTimerPanel
+{
+    position:absolute; 
+    z-index:1; 
+    top: 25px;
+    left: 10px;
+    min-width: 100px;
+    font-weight: bold;
+    background-color: rgba(80,80,80, 0.2);
+    display: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccc;
+} 
+
+
+
+

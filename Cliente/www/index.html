@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+<title>Proyecto de Antonio Rey Diaz</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/playerDataInterface.css">
+<link rel="stylesheet" type="text/css" href="css/audioInterface.css">
+<link rel="stylesheet" type="text/css" href="css/rankingInterface.css">
+<link rel="stylesheet" type="text/css" href="css/resurrectInterface.css">
+<link rel="stylesheet" type="text/css" href="css/notificationInterface.css">
+<link rel="stylesheet" type="text/css" href="css/waitingInterface.css">
+<link rel="stylesheet" type="text/css" href="css/resultsInterface.css">
+
+<script src="cordova.js"></script>
+<!-- <script src="https://192.168.43.96:3000/socket.io/socket.io.js"></script> -->
+<!-- <script src="https://192.168.1.128:3000/socket.io/socket.io.js"></script> -->
+<!-- <script src="https://desktop-7elep99:3000/socket.io/socket.io.js"></script> -->
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="js/gameInterface/CordovaInterface.js"></script>
+<script src="js/gameInterface/ThrowBombInterface.js"></script>
+<script src="js/gameInterface/ResizeInterface.js"></script>
+<script src="js/gameInterface/WaitingInterface.js"></script>
+<script src="js/gameInterface/NotificationInterface.js"></script>
+<script src="js/gameInterface/ResurrectInterface.js"></script>
+<script src="js/gameInterface/AccelerateInterface.js"></script>
+<script src="js/gameInterface/SocketInterface.js"></script>
+<script src="js/gameInterface/AudioInterface.js"></script>
+<script src="js/gameInterface/PlayerDataInterface.js"></script>
+<script src="js/gameInterface/RankingInterface.js"></script>
+<script src="js/gameInterface/DrawingInterface.js"></script>
+<script src="js/gameInterface/ResultsInterface.js"></script>
+<script src="js/gameInterface/GameInterface.js"></script>
+
+<script src="js/gameLogic/Ball.js"></script>
+<script src="js/gameLogic/Player.js"></script>
+<script src="js/gameLogic/Bomb.js"></script>
+<script src="js/gameLogic/PlayerRoundResult.js"></script>
+<script src="js/gameLogic/PlayerRoundResults.js"></script>
+<script src="js/gameLogic/RoundResult.js"></script>
+<script src="js/gameLogic/RoundResults.js"></script>
+<script src="js/gameLogic/Game.js"></script>
+<script src="js/gameLogic/index.js"></script>
+
+</head>
+
+<body>
+
+<canvas id="board" style="border:1px solid #d3d3d3;">
+	Tu navegador no soporta canvas
+</canvas>
+    
+<div id="forms">
+    <div class="tab">
+      <button class="tablinks"  id="defaultOpen">Register</button>
+      <button class="tablinks">Login</button>
+    </div>
+
+    <div id="registerForm" class="tabcontent">
+        <form>
+            <div id="registerLabels">
+                <label for="registerNick">Nick: </label>
+                <label for="registerPass">Password: </label>
+                <label for="registerAvatar">Avatar: </label>
+            </div>
+            <div id="registerData">
+                <input id="registerNick" type="text" name="nick">
+                <input id="registerPass" type="password" name="pass">
+                <input id="registerAvatar" type="file" name="registerAvatar" accept="image/*"/>
+                <button id="avatarButton" type="button">Select Image</button>
+                <span id="avatarFileName"></span>
+            </div>
+        </form>
+        <button id="registerButton" type="button">SEND</button>
+    </div>
+
+    <div id="loginForm" class="tabcontent">
+        <form>
+            <div id="loginLabels">
+                <label for="loginNick">Nick: </label>
+                <label for="loginPass">Password: </label>
+            </div>
+            <div id="loginData">
+                <input id="loginNick" type="text" name="nick">
+                <input id="loginPass" type="password" name="pass">
+            </div>
+        </form>
+        <button id="loginButton" type="button">SEND</button>
+    </div>
+</div>
+    <div id="audioPanel">
+        <span id="audioText">Prueba</span>
+        <button id="audioButton">Push to Talk</button>
+        <audio id="audioElement" controls autoplay></audio>
+    </div>
+    
+    <div id="rankingPanel">
+        <ul id="rankingList">
+            
+        </ul>
+        <div>
+            <button id="rankingButton">&#x25BC;</button>
+        </div>
+    </div>
+    
+    <div id="roundTimerPanel">
+        Time: <span id="roundTime"></span>
+    </div>
+    
+    <div id="playerResurrectPanel">
+        <span id="playerResurrectText">You Died!</span>
+        <button id="playerResurrectButton">Continue?</button>
+    </div>
+    
+    <div id="notificationPanel">
+        <span id="notificationText"></span>
+        <button id="notificationButton">OK</button>
+    </div>
+    
+    <div id="waitingPanel">
+        <span id="waitingText"></span>
+    </div>
+    
+    <div id="resultsPanel">
+        <div id="resultsContentsPanel">
+            <div id="playerResultsPanel">
+                <span class="resultsHeader">Player Results</span>
+                <div class="resultsContent">
+                    <table id="playerResultsTable" class="resultsTable"></table>
+                </div>
+            </div>
+            <div id="roundResultsPanel">
+                <span class="resultsHeader">Top Round Results</span>
+                <div class="resultsContent">
+                    <table id="roundResultsTable" class="resultsTable"></table>
+                </div>
+            </div>
+            <div id="globalResultsPanel">
+                <span class="resultsHeader">Top Global Results</span>
+                <div class="resultsContent">
+                    <table id="globalResultsTable" class="resultsTable"></table>
+                </div>
+            </div>
+        </div>
+        <div id="nextRoundPanel">
+            <button id="nextRoundButton"></button>
+        </div>
+    </div>
+    
+</body>
+</html>

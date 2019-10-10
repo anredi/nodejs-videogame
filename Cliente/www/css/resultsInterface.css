@@ -1,0 +1,94 @@
+
+#resultsPanel
+{
+  border:1px solid black;
+  background-color: white;
+  position:absolute; 
+  z-index:2; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 800px;
+  height: 300px;
+  overflow: hidden;
+  display: none;
+}
+
+.resultsHeader
+{
+    display: block;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.resultsTable
+{
+    padding: 20px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.resultsTable .resultDesc
+{
+    width: 50%;
+    text-align: left;
+}
+
+.resultsTable .resultValue
+{
+    width: 50%;
+    text-align: right;
+}
+
+#playerResultsPanel
+{
+    width: 29%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#roundResultsPanel
+{
+    width: 35%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#globalResultsPanel
+{
+    width: 35.6%;
+    height: 100%;
+    float: left;
+}
+
+#resultsContentsPanel
+{
+    height: 80%;
+}
+
+.resultsContent
+{
+    overflow: auto;
+    max-height: 75%;
+}
+
+#nextRoundPanel
+{
+    height: 10%;
+}
+
+#nextRoundButton
+{
+    display: block;
+    color: black;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+

@@ -1,0 +1,30 @@
+
+#playerResurrectPanel
+{
+  border:1px solid black;
+  background-color: white;
+  position:absolute; 
+  z-index:2; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  min-width: 400px;
+  display: none;
+}
+
+#playerResurrectText
+{
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+#playerResurrectButton
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
