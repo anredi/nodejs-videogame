@@ -3,7 +3,7 @@ TÍTULO DEL PROYECTO:
 VIDEOJUEGO DE NAVEGADOR BASADO EN CANVAS 2D, PHONEGAP Y
 WEBSOCKETS EN NODE.JS
 
-Autor: Antonio Rey Díaz
+Autor: Antonio Rey Díaz.
 
 Este proyecto consiste en un videojuego de navegador.
 
